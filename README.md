@@ -93,6 +93,12 @@ class Main {
 ```
 
 What's wrong with the following output? What would be the actual output? [2p] Modify what you need to correct this! [2p]
+getNumber is not a static variable, so in this case the Blackberry can not use it, unless it is changed to static. The actual output would be, after changing getNumber to static:
+Apple is created
+Blackberry is created
+4
+In order to not print the Applle is created part we need to delete the Apple classes constructor with the SOUT.
+
 ```
 Blackberry is created
 4
@@ -104,10 +110,11 @@ Blackberry is created
 ## 4. Question time! (~20 mins) [6p]
 
 ### Whats the difference between a Class and an Object? [2p]
-#### Your answer:
+#### Your answer:An object is an instance of a class. There are no objects without a class. In other words everey object can only exists in a class. Objects have a lifespan, classes do not.
+We can change the properties of an object.Also objects have to be created by using the keyword new!
 
 ### What is the superclass when a class doesnt extend anything? What methods will it inherit (the two most important is enough)? [2p]
-#### Your answer:
+#### Your answer: By default all classes inherit java.lang.Object., example method toString.
 
 ### What is polymorphism? [2p]
-#### Your answer:
+#### Your answer: Polymorhism enables multiple implementations for one interface. In mor simple approach,we can perform one action in multiple, different ways.
